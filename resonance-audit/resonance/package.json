@@ -1,0 +1,10 @@
+{
+  "name": "@polyvis/resonance-engine",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "zod": "^3.0.0",
+    "remark": "^14.0.0"
+  }
+}

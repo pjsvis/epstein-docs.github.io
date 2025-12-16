@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@resonance/*": ["./resonance-audit/resonance/src/*"],
+      "@docs/*": ["./resonance-audit/docs/*"],
+      "@inference/*": ["./resonance-audit/inference/*"],
+      "@/*": ["./*"]
+    },
+    "types": ["bun-types"],
+    "strict": true,
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "composite": true,
+    "moduleDetection": "force"
+  },
+  "include": ["resonance-audit/resonance/src/**/*", "resonance-audit/resonance/scripts/**/*"],
+  "exclude": ["node_modules"]
+}

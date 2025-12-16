@@ -4,9 +4,14 @@
   "description": "Static site for exploring OCR'd documents",
   "scripts": {
     "build": "NODE_OPTIONS='--max-old-space-size=8192' eleventy",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "transform": "bun run resonance/scripts/json-to-bento.ts",
+    "ingest": "bun run resonance/src/pipeline/ingest.ts",
+    "server": "bun run resonance/src/index.ts"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "typescript": "^5.0.0",
+    "bun-types": "latest"
   }
 }

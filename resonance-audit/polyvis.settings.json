@@ -1,0 +1,51 @@
+{
+	"paths": {
+		"database": {
+			"resonance": "public/resonance.db"
+		},
+		"docs": {
+			"root": "docs",
+			"webdocs": "docs/webdocs",
+			"architecture": "docs/architecture",
+			"public": "public/docs"
+		},
+		"sources": {
+			"experience": [
+				{ "path": "debriefs", "name": "Debrief" },
+				{ "path": "playbooks", "name": "Playbook" },
+				{ "path": "briefs", "name": "Brief" },
+				{ "path": "docs", "name": "Docs" }
+			],
+			"persona": {
+				"lexicon": "scripts/fixtures/conceptual-lexicon-ref-v1.79.json",
+				"cda": "scripts/fixtures/cda-ref-v63.json"
+			}
+		}
+	},
+	"graph": {
+		"tuning": {
+			"louvain": {
+				"persona": 0.3,
+				"experience": 0.25
+			}
+		}
+	},
+	"llm": {
+		"active_provider": "ollama",
+		"providers": {
+			"ollama": { 
+				"baseUrl": "http://localhost:11434/v1", 
+				"model": "granite3.3:latest",
+				"apiKey": "ollama"
+			},
+			"lm-studio": { 
+				"baseUrl": "http://localhost:1234/v1", 
+				"model": "ibm/granite-4-h-tiny",
+				"apiKey": "lm-studio"
+			}
+		}
+	},
+	"schema": {
+		"version": "1.0.0"
+	}
+}

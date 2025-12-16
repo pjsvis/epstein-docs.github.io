@@ -1,0 +1,97 @@
+/* ========================================
+   BASE STYLES & RESETS
+   ======================================== */
+
+html {
+	scrollbar-gutter: stable both-edges;
+	height: 100%;
+	overflow: hidden;
+	/* Strict app-shell behavior */
+	background-color: var(--surface-1);
+	color-scheme: light dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+	scroll-margin-top: var(--scroll-offset);
+}
+
+p {
+	text-wrap: pretty;
+	max-width: var(--size-content-3);
+}
+
+img {
+	/* Responsiveness */
+	max-width: 100%;
+	height: auto;
+
+	/* Error handling */
+	position: relative;
+	font-style: italic;
+	background-color: var(--surface-2);
+}
+
+/* 
+ * MIGRATED STYLES (from public/css/style.css)
+ */
+
+body {
+	font-family: var(--font-sans);
+	background-color: var(--accent);
+	color: var(--primary);
+	margin: 0;
+	line-height: 1.5;
+	height: 100%;
+	overflow: hidden;
+	/* Strict app-shell behavior */
+}
+
+/* Brutalist Link Reset */
+a,
+a:visited {
+	color: var(--link);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Restore Button Pointer (Tailwind Preflight removes this) */
+button {
+	cursor: pointer;
+}
+
+/* Monospace accents */
+.mono {
+	font-family: var(--font-mono);
+}
+
+/* Page Transitions */
+/* Page Transitions Removed for Zero Magic Rule */
+body {
+	opacity: 1;
+}
+
+/* Custom Scrollbar for Sidebars */
+/* Custom Scrollbar for Sidebars */
+::-webkit-scrollbar {
+	width: var(--size-1);
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--scrollthumb-color);
+	border-radius: var(--radius-1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--scrollthumb-hover-color);
+}
